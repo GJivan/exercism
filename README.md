@@ -1,2 +1,2 @@
-# excerism
-Excerism Excercises
+# exercism
+Exercism Exercises
