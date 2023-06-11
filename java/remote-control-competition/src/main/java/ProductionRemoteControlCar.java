@@ -1,4 +1,5 @@
-class ProductionRemoteControlCar implements RemoteControlCar, Comparable<ProductionRemoteControlCar> {
+class ProductionRemoteControlCar implements RemoteControlCar,
+        Comparable<ProductionRemoteControlCar> {
 
     private static final int UNITS_DRIVEN = 10;
     private int distanceDriven = 0;
@@ -21,12 +22,7 @@ class ProductionRemoteControlCar implements RemoteControlCar, Comparable<Product
     }
 
     @Override
-    public int compareTo(ProductionRemoteControlCar o) {
-        if (getNumberOfVictories() == o.getNumberOfVictories()) {
-            return 0;
-        } else if (getNumberOfVictories() > o.getNumberOfVictories()) {
-            return 1;
-        }
-        return -1;
+    public int compareTo(ProductionRemoteControlCar compCar) {
+        return Integer.compare(compCar.getNumberOfVictories(), getNumberOfVictories());
     }
 }

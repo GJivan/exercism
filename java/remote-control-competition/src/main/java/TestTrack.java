@@ -1,6 +1,6 @@
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 public class TestTrack {
 
@@ -8,9 +8,9 @@ public class TestTrack {
         car.drive();
     }
 
-    public static List<ProductionRemoteControlCar> getRankedCars(List<ProductionRemoteControlCar> cars) {
-
-
-        return cars.stream().sorted(Comparator.comparingInt(ProductionRemoteControlCar::getNumberOfVictories).reversed()).collect(Collectors.toList());
+    public static List<ProductionRemoteControlCar> getRankedCars(List<ProductionRemoteControlCar>
+                                                                         carList) {
+        Collections.sort(carList);
+        return carList;
     }
 }

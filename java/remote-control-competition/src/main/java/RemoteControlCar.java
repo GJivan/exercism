@@ -1,6 +1,5 @@
 public interface RemoteControlCar {
-
-    void drive();
+  void drive();
 
     int getDistanceTravelled();
 }
