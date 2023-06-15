@@ -1,7 +1,7 @@
 abstract class Fighter {
 
     boolean isVulnerable() {
-        throw new UnsupportedOperationException("Please provide implementation for this method");
+        return false;
     }
 
     abstract int damagePoints(Fighter fighter);
@@ -9,13 +9,6 @@ abstract class Fighter {
 }
 
 class Warrior extends Fighter {
-
-
-    @Override
-    boolean isVulnerable() {
-        return false;
-    }
-
     @Override
     public String toString() {
         return "Fighter is a Warrior";
