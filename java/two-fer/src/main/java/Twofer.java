@@ -1,8 +1,8 @@
+import java.util.Optional;
+
 public class Twofer {
     public String twofer(String name) {
-        if (name == null || name.isBlank()) {
-            return "One for you, one for me.";
-        }
-        return "One for " + name + ", one for me.";
+        String otherPerson = Optional.ofNullable(name).orElse("you");
+        return "One for " + otherPerson + ", one for me.";
     }
 }
